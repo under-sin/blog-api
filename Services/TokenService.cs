@@ -10,7 +10,7 @@ public class TokenService
     public string GenerateToken(User user)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
-        var key = Encoding.ASCII.GetBytes(Configuration.JwtKey);
+        var key = Encoding.ASCII.GetBytes(Configuration.JwtKey); // transforma em um array de bytes
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Expires = DateTime.UtcNow.AddHours(8),
@@ -19,6 +19,6 @@ public class TokenService
                 SecurityAlgorithms.HmacSha256Signature)
         };
         var token = tokenHandler.CreateToken(tokenDescriptor);
-        return tokenHandler.WriteToken(token); 
+        return tokenHandler.WriteToken(token);
     }
 }

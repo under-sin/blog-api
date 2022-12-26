@@ -48,8 +48,7 @@ public class CategoryController : ControllerBase
 
     [HttpPost("v1/categories")]
     public async Task<IActionResult> PostAsync(
-        [FromBody] EditorCategoryViewModel model,
-        [FromServices] BlogDataContext context)
+        [FromBody] EditorCategoryViewModel model, [FromServices] BlogDataContext context)
     {
         try
         {
@@ -113,8 +112,8 @@ public class CategoryController : ControllerBase
 
     [HttpDelete("v1/categories/{id:int}")]
     public async Task<IActionResult> DeleteAsync(
-    [FromRoute] int id,
-    [FromServices] BlogDataContext context)
+        [FromRoute] int id,
+        [FromServices] BlogDataContext context)
     {
         try
         {
