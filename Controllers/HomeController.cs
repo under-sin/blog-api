@@ -6,10 +6,10 @@ namespace Blog.Controllers;
 [Route("")]
 public class HomeController : ControllerBase
 {
-  [Route("")]
-  public IActionResult Index()
-  {
-    //Health check
-    return Ok();
-  }
+    [Route("")]
+    public IActionResult Index()
+    {
+        //Health check
+        return Ok();
+    }
 }
