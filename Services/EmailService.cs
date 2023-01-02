@@ -8,7 +8,7 @@ public class EmailService
     public bool Send(
         string toName,
         string toEmail,
-        string subject,
+        string subject, 
         string body,
         string fromName = "Anderson Vieira",
         string fromEmail = "andersonvieira818@yahoo.com.br")

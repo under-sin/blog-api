@@ -8,7 +8,7 @@ public class ResultViewModel<T>
         Errors = errors;
     }
 
-    public ResultViewModel(T data)
+    public ResultViewModel(T data) 
     {
         Data = data;
     }
